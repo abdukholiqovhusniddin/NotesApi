@@ -6,39 +6,83 @@ namespace NotesApi.Repository;
 public class NoteRepository(AppDbContext context):INoteRepository
 {
     private readonly AppDbContext _context = context;
-    public async Task<List<Note>> GetAllAsync()
+    public async Task<(IEnumerable<Note> Notes, int TotalCount)> GetAllAsync(
+            int? categoryId = null,
+            string? search = null,
+            int page = 1,
+            int pageSize = 10)
     {
-        return await _context.Notes.Include(n => n.Category).ToListAsync();
+        var query = _context.Notes.Include(n => n.Category).AsQueryable();
+
+        if (categoryId.HasValue)
+        {
+            query = query.Where(n => n.CategoryId == categoryId.Value);
+        }
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            var searchTerm = search.ToLower();
+            query = query.Where(n =>
+                n.Title.Contains(searchTerm, StringComparison.CurrentCultureIgnoreCase) ||
+                n.Content.Contains(searchTerm, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        var totalCount = await query.CountAsync();
+
+        var notes = await query
+            .OrderByDescending(n => n.CreatedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        return (notes, totalCount);
     }
+
     public async Task<Note?> GetByIdAsync(int id)
     {
-        return await _context.Notes.Include(n => n.Category).FirstOrDefaultAsync(n => n.Id == id);
+        return await _context.Notes
+            .Include(n => n.Category)
+            .FirstOrDefaultAsync(n => n.Id == id);
     }
+
     public async Task<Note> CreateAsync(Note note)
     {
+        note.CreatedAt = DateTime.UtcNow;
         _context.Notes.Add(note);
         await _context.SaveChangesAsync();
+
+        await _context.Entry(note)
+            .Reference(n => n.Category)
+            .LoadAsync();
+
         return note;
     }
-    public async Task<Note?> UpdateAsync(int id, Note note)
+
+    public async Task<Note> UpdateAsync(Note note)
     {
-        var existing = await _context.Notes.FindAsync(id);
-        if (existing == null) return null;
-
-        existing.Title = note.Title;
-        existing.Content = note.Content;
-        existing.CategoryId = note.CategoryId;
-        existing.UpdatedAt = DateTime.UtcNow;
-
+        note.UpdatedAt = DateTime.UtcNow;
+        _context.Notes.Update(note);
         await _context.SaveChangesAsync();
-        return existing;
+
+        await _context.Entry(note)
+            .Reference(n => n.Category)
+            .LoadAsync();
+
+        return note;
     }
-    public async Task<Note?> DeleteAsync(int id)
+
+    public async Task<bool> DeleteAsync(int id)
     {
         var note = await _context.Notes.FindAsync(id);
-        if (note == null) return null;
+        if (note == null) return false;
+
         _context.Notes.Remove(note);
         await _context.SaveChangesAsync();
-        return note;
+        return true;
+    }
+
+    public async Task<bool> ExistsAsync(int id)
+    {
+        return await _context.Notes.AnyAsync(n => n.Id == id);
     }
 }
