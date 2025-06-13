@@ -1,5 +1,6 @@
-﻿using NotesApi.Models;
-using NotesApi.Repository;
+﻿using NotesApi.Interfaces.Repository;
+using NotesApi.Interfaces.Sevices;
+using NotesApi.Models;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Service;
@@ -16,7 +17,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
     {
         var (notes, totalCount) = await _noteRepository.GetAllAsync(categoryId, search, page, pageSize);
 
-        var noteDtos = notes.Select(n => new NoteDto
+        return (notes.Select(n => new NoteDto
         {
             Id = n.Id,
             Title = n.Title,
@@ -25,15 +26,34 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             CategoryName = n.Category.Name,
             CreatedAt = n.CreatedAt,
             UpdatedAt = n.UpdatedAt
-        });
-
-        return (noteDtos, totalCount);
+        }), totalCount);
     }
 
-    public async Task<NoteDto?> GetNoteByIdAsync(int id)
+    public async Task<NoteDto?> GetNoteByIdAsync(int id) =>
+        (await _noteRepository.GetByIdAsync(id)) is { } note
+            ? new NoteDto
+                {
+                    Id = note.Id,
+                    Title = note.Title,
+                    Content = note.Content,
+                    CategoryId = note.CategoryId,
+                    CategoryName = note.Category.Name,
+                    CreatedAt = note.CreatedAt,
+                    UpdatedAt = note.UpdatedAt
+                }
+                : null;
+
+    public async Task<NoteDto> CreateNoteAsync(NoteInputDto createNoteDto)
     {
-        var note = await _noteRepository.GetByIdAsync(id);
-        if (note == null) return null;
+        if(!await _categoryRepository.ExistsAsync(createNoteDto.CategoryId))
+            throw new InvalidOperationException("Specified category does not exist.");
+
+        var note = await _noteRepository.CreateAsync(new Note
+        {
+            Title = createNoteDto.Title,
+            Content = createNoteDto.Content,
+            CategoryId = createNoteDto.CategoryId
+        });
 
         return new NoteDto
         {
@@ -47,47 +67,15 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
         };
     }
 
-    public async Task<NoteDto> CreateNoteAsync(NoteInputDto createNoteDto)
-    {
-        var categoryExists = await _categoryRepository.ExistsAsync(createNoteDto.CategoryId);
-        if (!categoryExists)
-        {
-            throw new InvalidOperationException("Specified category does not exist.");
-        }
-
-        var note = new Note
-        {
-            Title = createNoteDto.Title,
-            Content = createNoteDto.Content,
-            CategoryId = createNoteDto.CategoryId
-        };
-
-        var createdNote = await _noteRepository.CreateAsync(note);
-
-        return new NoteDto
-        {
-            Id = createdNote.Id,
-            Title = createdNote.Title,
-            Content = createdNote.Content,
-            CategoryId = createdNote.CategoryId,
-            CategoryName = createdNote.Category.Name,
-            CreatedAt = createdNote.CreatedAt,
-            UpdatedAt = createdNote.UpdatedAt
-        };
-    }
-
     public async Task<NoteDto?> UpdateNoteAsync(int id, NoteInputDto updateNoteDto)
     {
         var note = await _noteRepository.GetByIdAsync(id);
-        if (note == null) return null;
+        if (note is null) return null;
 
-        var categoryExists = await _categoryRepository.ExistsAsync(updateNoteDto.CategoryId);
-        if (!categoryExists)
+        if(!await _categoryRepository.ExistsAsync(updateNoteDto.CategoryId))
             throw new InvalidOperationException("Specified category does not exist.");
 
-        note.Title = updateNoteDto.Title;
-        note.Content = updateNoteDto.Content;
-        note.CategoryId = updateNoteDto.CategoryId;
+        (note.Title, note.Content, note.CategoryId) = (updateNoteDto.Title, updateNoteDto.Content, updateNoteDto.CategoryId);
 
         var updatedNote = await _noteRepository.UpdateAsync(note);
 
@@ -103,11 +91,6 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
         };
     }
 
-    public async Task<bool> DeleteNoteAsync(int id)
-    {
-        var noteExists = await _noteRepository.ExistsAsync(id);
-        if (!noteExists) return false;
-
-        return await _noteRepository.DeleteAsync(id);
-    }
+    public async Task<bool> DeleteNoteAsync(int id) =>
+        await _noteRepository.ExistsAsync(id) && await _noteRepository.DeleteAsync(id);
 }

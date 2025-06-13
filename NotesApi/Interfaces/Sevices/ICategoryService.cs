@@ -1,6 +1,6 @@
 ﻿using NotesAPI.DTOs;
 
-namespace NotesApi.Service;
+namespace NotesApi.Interfaces.Sevices;
 
 public interface ICategoryService
 {

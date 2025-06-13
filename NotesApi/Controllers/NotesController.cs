@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NotesApi.Service;
+using NotesApi.Interfaces.Sevices;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Controllers;
@@ -17,7 +17,7 @@ public class NotesController(INoteService service) : ControllerBase
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
-        if (page < 1) page = 1;
+        page = Math.Max(page, 1);
         if (pageSize < 1 || pageSize > 100) pageSize = 10;
 
         var (notes, totalCount) = await _noteService.GetAllNotesAsync(categoryId, search, page, pageSize);
@@ -42,8 +42,7 @@ public class NotesController(INoteService service) : ControllerBase
     [HttpPost]
     public async Task<ActionResult<NoteDto>> CreateNote(NoteInputDto createNoteDto)
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+        if (!ModelState.IsValid)  return BadRequest(ModelState);
 
         try
         {
@@ -64,11 +63,9 @@ public class NotesController(INoteService service) : ControllerBase
 
         try
         {
-            var note = await _noteService.UpdateNoteAsync(id, updateNoteDto);
-            if (note == null)
-                return NotFound($"Note with ID {id} not found.");
-
-            return Ok(note);
+            return await _noteService.UpdateNoteAsync(id, updateNoteDto) is { } updatedNote
+                ? Ok(updatedNote)
+                : NotFound($"Note with ID {id} not found.");
         }
         catch (InvalidOperationException ex)
         {

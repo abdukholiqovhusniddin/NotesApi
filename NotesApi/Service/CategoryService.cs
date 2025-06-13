@@ -1,5 +1,6 @@
-﻿using NotesApi.Models;
-using NotesApi.Repository;
+﻿using NotesApi.Interfaces.Repository;
+using NotesApi.Interfaces.Sevices;
+using NotesApi.Models;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Service;
@@ -8,52 +9,26 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
 {
     private readonly ICategoryRepository _categoryRepository = categoryRepository;
 
-    public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync()
-    {
-        var categories = await _categoryRepository.GetAllAsync();
-        return categories.Select(c => new CategoryDto
-        {
-            Id = c.Id,
-            Name = c.Name
-        });
-    }
-
-    public async Task<CategoryDto?> GetCategoryByIdAsync(int id)
-    {
-        var category = await _categoryRepository.GetByIdAsync(id);
-        if (category == null) return null;
-
-        return new CategoryDto
-        {
-            Id = category.Id,
-            Name = category.Name
-        };
-    }
+    public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync() =>
+        (await _categoryRepository.GetAllAsync())
+            .Select(c => new CategoryDto(c.Id, c.Name));
+    public async Task<CategoryDto?> GetCategoryByIdAsync(int id) =>
+        (await _categoryRepository.GetByIdAsync(id)) is { } category
+            ? new CategoryDto(category.Id, category.Name)
+            : null;
 
     public async Task<CategoryDto> CreateCategoryAsync(CategoryInputDto createCategoryDto)
     {
-        var existingCategory = await _categoryRepository.GetByNameAsync(createCategoryDto.Name);
-        if (existingCategory != null)
+        if(await _categoryRepository.GetByNameAsync(createCategoryDto.Name) is not null)
             throw new InvalidOperationException("Category with this name already exists.");
 
-        var category = new Category
-        {
-            Name = createCategoryDto.Name
-        };
-
-        var createdCategory = await _categoryRepository.CreateAsync(category);
-
-        return new CategoryDto
-        {
-            Id = createdCategory.Id,
-            Name = createdCategory.Name
-        };
+        var createdCategory = await _categoryRepository.CreateAsync(new Category { Name = createCategoryDto.Name});
+        return new CategoryDto(createdCategory.Id, createdCategory.Name);
     }
 
     public async Task<CategoryDto?> UpdateCategoryAsync(int id, CategoryInputDto updateCategoryDto)
     {
-        var category = await _categoryRepository.GetByIdAsync(id);
-        if (category == null) return null;
+        if(await _categoryRepository.GetByIdAsync(id) is not { } category) return null;
 
         var existingCategory = await _categoryRepository.GetByNameAsync(updateCategoryDto.Name);
         if (existingCategory != null && existingCategory.Id != id)
@@ -62,20 +37,14 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
         category.Name = updateCategoryDto.Name;
         var updatedCategory = await _categoryRepository.UpdateAsync(category);
 
-        return new CategoryDto
-        {
-            Id = updatedCategory.Id,
-            Name = updatedCategory.Name
-        };
+        return new CategoryDto(updatedCategory.Id, updatedCategory.Name);
     }
 
     public async Task<bool> DeleteCategoryAsync(int id)
     {
-        var categoryExists = await _categoryRepository.ExistsAsync(id);
-        if (!categoryExists) return false;
+        if(!await _categoryRepository.ExistsAsync(id))  return false;
 
-        var hasNotes = await _categoryRepository.HasNotesAsync(id);
-        if (hasNotes)
+        if(await _categoryRepository.HasNotesAsync(id))
             throw new InvalidOperationException("Cannot delete category that has associated notes.");
 
         return await _categoryRepository.DeleteAsync(id);

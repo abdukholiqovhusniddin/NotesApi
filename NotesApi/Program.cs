@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using NotesApi.Data;
+using NotesApi.Interfaces.Repository;
+using NotesApi.Interfaces.Sevices;
+using NotesApi.Middlewares;
 using NotesApi.Repository;
 using NotesApi.Service;
 
@@ -26,6 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

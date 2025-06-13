@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NotesApi.Data.Configurations;
 using NotesApi.Models;
 
 namespace NotesApi.Data;
@@ -14,31 +15,7 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Category>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasIndex(e => e.Name).IsUnique();
-            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
-        });
-
-        modelBuilder.Entity<Note>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.Property(e => e.Title).IsRequired().HasMaxLength(100);
-            entity.Property(e => e.Content).IsRequired().HasMaxLength(10000);
-            entity.Property(e => e.CreatedAt).IsRequired();
-
-            entity.HasOne(n => n.Category)
-                  .WithMany(c => c.Notes)
-                  .HasForeignKey(n => n.CategoryId)
-                  .OnDelete(DeleteBehavior.Restrict);
-        });
-
-        modelBuilder.Entity<Category>().HasData(
-            new Category { Id = 1, Name = "Work" },
-            new Category { Id = 2, Name = "Personal" },
-            new Category { Id = 3, Name = "Study" }
-        );
+        modelBuilder.ApplyConfiguration(new NoteConfiguration());
+        modelBuilder.ApplyConfiguration(new CategoryConfiguration());
     }
-
 }

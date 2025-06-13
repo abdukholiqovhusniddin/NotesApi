@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace NotesAPI.DTOs;
-public class CategoryDto
+public record CategoryDto(int Id, string Name)
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
+    public int Id { get; set; } = Id;
+    public string Name { get; set; } = Name;
 }
 
 public class CategoryInputDto

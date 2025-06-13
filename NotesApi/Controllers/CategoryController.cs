@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NotesApi.Service;
+using NotesApi.Interfaces.Sevices;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Controllers;
@@ -15,23 +15,15 @@ public class CategoryController(ICategoryService service) : ControllerBase
         Ok(await _categoryService.GetAllCategoriesAsync());
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<CategoryDto>> GetCategory(int id)
-    {
-        var category = await _categoryService.GetCategoryByIdAsync(id);
-        if (category == null)
-            return NotFound($"Category with ID {id} not found.");
-        
-        return Ok(category);
-    }
-
+    public async Task<ActionResult<CategoryDto>> GetCategory(int id) =>
+        await _categoryService.GetCategoryByIdAsync(id) is { } category
+            ? Ok(category)
+            : NotFound($"Category with ID {id} not found.");
+   
     [HttpPost]
     public async Task<ActionResult<CategoryDto>> CreateCategory(CategoryInputDto createCategoryDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
+        if (!ModelState.IsValid)  return BadRequest(ModelState);
         try
         {
             var category = await _categoryService.CreateCategoryAsync(createCategoryDto);
@@ -39,31 +31,23 @@ public class CategoryController(ICategoryService service) : ControllerBase
         }
         catch (InvalidOperationException ex)
         {
-            return BadRequest("Error in CreateCategory. \n" + ex.Message);
+            return BadRequest(ex.Message);
         }
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<CategoryDto>> UpdateCategory(int id, CategoryInputDto updateCategoryDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
+        if (!ModelState.IsValid)  return BadRequest(ModelState);
         try
         {
-            var category = await _categoryService.UpdateCategoryAsync(id, updateCategoryDto);
-            if (category == null)
-            {
-                return NotFound($"Category with ID {id} not found.");
-            }
-
-            return Ok(category);
+            return await _categoryService.UpdateCategoryAsync(id, updateCategoryDto) is { } updated
+                ? Ok(updated)
+                : NotFound($"Category with ID {id} not found.");
         }
         catch (InvalidOperationException ex)
         {
-            return BadRequest("Error in UpdateCategory. " + ex.Message);
+            return BadRequest(ex.Message);
         }
     }
 
@@ -72,15 +56,13 @@ public class CategoryController(ICategoryService service) : ControllerBase
     {
         try
         {
-            var deleted = await _categoryService.DeleteCategoryAsync(id);
-            if (!deleted)
-                return NotFound($"Category with ID {id} not found.");
-
-            return NoContent();
+            return await _categoryService.DeleteCategoryAsync(id)
+                ? NoContent()
+                : NotFound($"Category with ID {id} not found.");
         }
         catch (InvalidOperationException ex)
         {
-            return BadRequest("Error in DeleteCategory" + ex.Message);
+            return BadRequest(ex.Message);
         }
     }
 }

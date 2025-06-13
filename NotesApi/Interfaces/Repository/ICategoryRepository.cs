@@ -1,6 +1,6 @@
 ﻿using NotesApi.Models;
 
-namespace NotesApi.Repository;
+namespace NotesApi.Interfaces.Repository;
 
 public interface ICategoryRepository
 {
