@@ -5,6 +5,7 @@ namespace NotesApi.Interfaces.Repository;
 public interface INoteRepository
 {
     Task<(IEnumerable<Note> Notes, int TotalCount)> GetAllAsync(
+            int UserId,
             int? categoryId = null,
             string? search = null,
             int page = 1,

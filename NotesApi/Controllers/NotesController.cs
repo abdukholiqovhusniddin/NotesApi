@@ -12,6 +12,7 @@ public class NotesController(INoteService service) : ControllerBase
 
     [HttpGet]
     public async Task<ActionResult<object>> GetNotes(
+        [FromQuery] int UserId,
         [FromQuery] int? categoryId = null,
         [FromQuery] string? search = null,
         [FromQuery] int page = 1,
@@ -20,10 +21,11 @@ public class NotesController(INoteService service) : ControllerBase
         page = Math.Max(page, 1);
         if (pageSize < 1 || pageSize > 100) pageSize = 10;
 
-        var (notes, totalCount) = await _noteService.GetAllNotesAsync(categoryId, search, page, pageSize);
+        var (notes, totalCount) = await _noteService.GetAllNotesAsync(UserId ,categoryId, search, page, pageSize);
 
         var response = new
         {
+            UserId = UserId,
             Notes = notes,
             TotalCount = totalCount,
             Page = page,
@@ -42,36 +44,15 @@ public class NotesController(INoteService service) : ControllerBase
     [HttpPost]
     public async Task<ActionResult<NoteDto>> CreateNote(NoteInputDto createNoteDto)
     {
-        if (!ModelState.IsValid)  return BadRequest(ModelState);
-
-        try
-        {
-            var note = await _noteService.CreateNoteAsync(createNoteDto);
-            return CreatedAtAction(nameof(GetNote), new { id = note.Id }, note);
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        var note = await _noteService.CreateNoteAsync(createNoteDto);
+        return CreatedAtAction(nameof(GetNote), new { id = note.Id }, note);
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<NoteDto>> UpdateNote(int id, NoteInputDto updateNoteDto)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        try
-        {
-            return await _noteService.UpdateNoteAsync(id, updateNoteDto) is { } updatedNote
+    public async Task<ActionResult<NoteDto>> UpdateNote(int id, NoteInputDto updateNoteDto) =>
+                await _noteService.UpdateNoteAsync(id, updateNoteDto) is { } updatedNote
                 ? Ok(updatedNote)
                 : NotFound($"Note with ID {id} not found.");
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteNote(int id) =>

@@ -1,4 +1,5 @@
-﻿using NotesApi.Interfaces.Repository;
+﻿using NotesApi.Exceptions;
+using NotesApi.Interfaces.Repository;
 using NotesApi.Interfaces.Sevices;
 using NotesApi.Models;
 using NotesAPI.DTOs;
@@ -10,12 +11,13 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
     private readonly ICategoryRepository _categoryRepository = categoryRepository;
 
     public async Task<(IEnumerable<NoteDto> Notes, int TotalCount)> GetAllNotesAsync(
+        int UserId,
         int? categoryId = null,
         string? search = null,
         int page = 1,
         int pageSize = 10)
     {
-        var (notes, totalCount) = await _noteRepository.GetAllAsync(categoryId, search, page, pageSize);
+        var (notes, totalCount) = await _noteRepository.GetAllAsync(UserId ,categoryId, search, page, pageSize);
 
         return (notes.Select(n => new NoteDto
         {
@@ -24,6 +26,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             Content = n.Content,
             CategoryId = n.CategoryId,
             CategoryName = n.Category.Name,
+            UserId = n.UserId,
             CreatedAt = n.CreatedAt,
             UpdatedAt = n.UpdatedAt
         }), totalCount);
@@ -37,6 +40,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
                     Title = note.Title,
                     Content = note.Content,
                     CategoryId = note.CategoryId,
+                    UserId = note.UserId,
                     CategoryName = note.Category.Name,
                     CreatedAt = note.CreatedAt,
                     UpdatedAt = note.UpdatedAt
@@ -46,14 +50,16 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
     public async Task<NoteDto> CreateNoteAsync(NoteInputDto createNoteDto)
     {
         if(!await _categoryRepository.ExistsAsync(createNoteDto.CategoryId))
-            throw new InvalidOperationException("Specified category does not exist.");
+            throw new ApiException("Specified category does not exist.");
 
         var note = await _noteRepository.CreateAsync(new Note
         {
             Title = createNoteDto.Title,
             Content = createNoteDto.Content,
-            CategoryId = createNoteDto.CategoryId
+            CategoryId = createNoteDto.CategoryId,
+            UserId = createNoteDto.UserId
         });
+
 
         return new NoteDto
         {
@@ -61,6 +67,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             Title = note.Title,
             Content = note.Content,
             CategoryId = note.CategoryId,
+            UserId = note.UserId,
             CategoryName = note.Category.Name,
             CreatedAt = note.CreatedAt,
             UpdatedAt = note.UpdatedAt
@@ -73,9 +80,9 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
         if (note is null) return null;
 
         if(!await _categoryRepository.ExistsAsync(updateNoteDto.CategoryId))
-            throw new InvalidOperationException("Specified category does not exist.");
+            throw new ApiException("Specified category does not exist.");
 
-        (note.Title, note.Content, note.CategoryId) = (updateNoteDto.Title, updateNoteDto.Content, updateNoteDto.CategoryId);
+        (note.Title, note.Content, note.CategoryId, note.UserId) = (updateNoteDto.Title, updateNoteDto.Content, updateNoteDto.CategoryId, updateNoteDto.UserId);
 
         var updatedNote = await _noteRepository.UpdateAsync(note);
 
@@ -85,6 +92,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             Title = updatedNote.Title,
             Content = updatedNote.Content,
             CategoryId = updatedNote.CategoryId,
+            UserId = updatedNote.UserId,
             CategoryName = updatedNote.Category.Name,
             CreatedAt = updatedNote.CreatedAt,
             UpdatedAt = updatedNote.UpdatedAt

@@ -47,6 +47,28 @@
           }
         }
       },
+      "BCrypt/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/DevOne.Security.Cryptography.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/DevOne.Security.Cryptography.BCrypt.dll": {}
+        }
+      },
+      "BCrypt.Net-Core/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/9.0.6": {
         "type": "package",
         "dependencies": {
@@ -596,7 +618,7 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/8.1.4": {
+      "Swashbuckle.AspNetCore.Swagger/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.23"
@@ -615,10 +637,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/8.1.4": {
+      "Swashbuckle.AspNetCore.SwaggerGen/9.0.1": {
         "type": "package",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "8.1.4"
+          "Swashbuckle.AspNetCore.Swagger": "9.0.1"
         },
         "compile": {
           "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
@@ -631,7 +653,7 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/8.1.4": {
+      "Swashbuckle.AspNetCore.SwaggerUI/9.0.1": {
         "type": "package",
         "compile": {
           "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
@@ -1111,6 +1133,41 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "BCrypt/1.0.0": {
+      "sha512": "/ibwe2Sg7MJR26IrEzW2Rde9/+A+AYXB5Kf9w/8BVLDdzSfUe4W2M7i2efy1Wa9wHh1k0y81Q6h9Ty8C6IrUGA==",
+      "type": "package",
+      "path": "bcrypt/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.1.0.0.nupkg.sha512",
+        "bcrypt.nuspec",
+        "lib/DevOne.Security.Cryptography.BCrypt.dll"
+      ]
+    },
+    "BCrypt.Net-Core/1.6.0": {
+      "sha512": "hsKiHGjrnlDW05MzuzzlD9gNP8YOW2KbZ+FbvISrilsKJJ76tXKhWey6psZX5sd7DczNpSU2U6ldjPoblk8BLw==",
+      "type": "package",
+      "path": "bcrypt.net-core/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-core.1.6.0.nupkg.sha512",
+        "bcrypt.net-core.nuspec",
+        "lib/net40/BCrypt.Net-Core.dll",
+        "lib/net40/BCrypt.Net-Core.pdb",
+        "lib/net45/BCrypt.Net-Core.dll",
+        "lib/net45/BCrypt.Net-Core.pdb",
+        "lib/net451/BCrypt.Net-Core.dll",
+        "lib/net451/BCrypt.Net-Core.pdb",
+        "lib/net452/BCrypt.Net-Core.dll",
+        "lib/net452/BCrypt.Net-Core.pdb",
+        "lib/netstandard1.3/BCrypt.Net-Core.dll",
+        "lib/netstandard1.3/BCrypt.Net-Core.pdb",
+        "lib/netstandard2.0/BCrypt.Net-Core.dll",
+        "lib/netstandard2.0/BCrypt.Net-Core.pdb"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/9.0.6": {
@@ -1959,10 +2016,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Swashbuckle.AspNetCore.Swagger/8.1.4": {
-      "sha512": "w83aYEBJYNa6ZYomziwZWwXhqQPLKhZH0n8MzqqNhF1ElCGBKm71kd7W6pgIr/yu0i6ymQzrZUFSZLdvH1kY5w==",
+    "Swashbuckle.AspNetCore.Swagger/9.0.1": {
+      "sha512": "4/9tBsbeCN+ewwqjEBPq3BszNE9tOvA1iDogwT7qW7L0Uh942IozhtF9VaICD70XyZIlKNiHjc2Vt5QE09P4nw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/8.1.4",
+      "path": "swashbuckle.aspnetcore.swagger/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1972,18 +2029,15 @@
         "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll",
         "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swagger.8.1.4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.9.0.1.nupkg.sha512",
         "swashbuckle.aspnetcore.swagger.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/8.1.4": {
-      "sha512": "aBwO2MF1HHAaWgdBwX8tlSqxycOKTKmCT6pEpb0oSY1pn7mUdmzJvHZA0HxWx9nfmKP0eOGQcLC9ZnN/MuehRQ==",
+    "Swashbuckle.AspNetCore.SwaggerGen/9.0.1": {
+      "sha512": "Za5w1NfLMF0Tt4GTgC491wfmuuMwNw8A5nwZuytpBd4UXYZxkwNJa3QnRYGbUQD9MjLzQCYnKc8rMrr5LglW6A==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/8.1.4",
+      "path": "swashbuckle.aspnetcore.swaggergen/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1993,18 +2047,15 @@
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggergen.8.1.4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.9.0.1.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/8.1.4": {
-      "sha512": "mTn6OwB43ETrN6IgAZd7ojWGhTwBZ98LT3QwbAn6Gg3wJStQV4znU0mWiHaKFlD/+Qhj1uhAUOa52rmd6xmbzg==",
+    "Swashbuckle.AspNetCore.SwaggerUI/9.0.1": {
+      "sha512": "UuU+RvZbJZmnciVzi8G0jb3c6xeA4O8pQGrxl30eCK3pRNvurzZgS6shEei27q9wgvp0/UrTUNUM/a1kSlTfzw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/8.1.4",
+      "path": "swashbuckle.aspnetcore.swaggerui/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2014,11 +2065,8 @@
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggerui.8.1.4.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.9.0.1.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
@@ -2919,12 +2967,14 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "BCrypt >= 1.0.0",
+      "BCrypt.Net-Core >= 1.6.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.6",
       "Microsoft.EntityFrameworkCore >= 9.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.6",
-      "Swashbuckle.AspNetCore.Swagger >= 8.1.4",
-      "Swashbuckle.AspNetCore.SwaggerGen >= 8.1.4",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 8.1.4"
+      "Swashbuckle.AspNetCore.Swagger >= 9.0.1",
+      "Swashbuckle.AspNetCore.SwaggerGen >= 9.0.1",
+      "Swashbuckle.AspNetCore.SwaggerUI >= 9.0.1"
     ]
   },
   "packageFolders": {
@@ -2977,6 +3027,14 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "BCrypt": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "BCrypt.Net-Core": {
+            "target": "Package",
+            "version": "[1.6.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.6, )"
@@ -2991,15 +3049,15 @@
           },
           "Swashbuckle.AspNetCore.Swagger": {
             "target": "Package",
-            "version": "[8.1.4, )"
+            "version": "[9.0.1, )"
           },
           "Swashbuckle.AspNetCore.SwaggerGen": {
             "target": "Package",
-            "version": "[8.1.4, )"
+            "version": "[9.0.1, )"
           },
           "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",
-            "version": "[8.1.4, )"
+            "version": "[9.0.1, )"
           }
         },
         "imports": [
@@ -3024,5 +3082,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

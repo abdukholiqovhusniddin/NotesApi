@@ -23,46 +23,19 @@ public class CategoryController(ICategoryService service) : ControllerBase
     [HttpPost]
     public async Task<ActionResult<CategoryDto>> CreateCategory(CategoryInputDto createCategoryDto)
     {
-        if (!ModelState.IsValid)  return BadRequest(ModelState);
-        try
-        {
             var category = await _categoryService.CreateCategoryAsync(createCategoryDto);
             return CreatedAtAction(nameof(GetCategory), new { id = category.Id }, category);
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<CategoryDto>> UpdateCategory(int id, CategoryInputDto updateCategoryDto)
-    {
-        if (!ModelState.IsValid)  return BadRequest(ModelState);
-        try
-        {
-            return await _categoryService.UpdateCategoryAsync(id, updateCategoryDto) is { } updated
+    public async Task<ActionResult<CategoryDto>> UpdateCategory(int id, CategoryInputDto updateCategoryDto) =>
+             await _categoryService.UpdateCategoryAsync(id, updateCategoryDto) is { } updated
                 ? Ok(updated)
                 : NotFound($"Category with ID {id} not found.");
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteCategory(int id)
-    {
-        try
-        {
-            return await _categoryService.DeleteCategoryAsync(id)
+    public async Task<IActionResult> DeleteCategory(int id) =>
+            await _categoryService.DeleteCategoryAsync(id)
                 ? NoContent()
                 : NotFound($"Category with ID {id} not found.");
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
 }

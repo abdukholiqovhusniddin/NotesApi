@@ -8,14 +8,18 @@ public class NoteRepository(AppDbContext context):INoteRepository
 {
     private readonly AppDbContext _context = context;
     public async Task<(IEnumerable<Note> Notes, int TotalCount)> GetAllAsync(
+        int UserId,
             int? categoryId = null,
             string? search = null,
             int page = 1,
-            int pageSize = 10)
+            int pageSize = 10
+            )
     {
         var query = _context.Notes
             .Include(n => n.Category)
+            .Where(n => n.UserId == UserId)
             .AsQueryable();
+
 
         if (categoryId.HasValue)
             query = query.Where(n => n.CategoryId == categoryId.Value);
