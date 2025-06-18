@@ -81,5 +81,5 @@ D:\Git-Hub_pr\NotesApi\NotesApi\obj\Debug\net9.0\refint\NotesApi.dll
 D:\Git-Hub_pr\NotesApi\NotesApi\obj\Debug\net9.0\NotesApi.pdb
 D:\Git-Hub_pr\NotesApi\NotesApi\obj\Debug\net9.0\NotesApi.genruntimeconfig.cache
 D:\Git-Hub_pr\NotesApi\NotesApi\obj\Debug\net9.0\ref\NotesApi.dll
-D:\Git-Hub_pr\NotesApi\NotesApi\bin\Debug\net9.0\DevOne.Security.Cryptography.BCrypt.dll
 D:\Git-Hub_pr\NotesApi\NotesApi\bin\Debug\net9.0\BCrypt.Net-Core.dll
+D:\Git-Hub_pr\NotesApi\NotesApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

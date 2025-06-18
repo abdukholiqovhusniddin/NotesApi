@@ -3,39 +3,83 @@
   "WorkspaceRootPath": "D:\\Git-Hub_pr\\NotesApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\jwtauth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\jwtauth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NotesDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\jwtauth\\authextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\jwtauth\\authextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\service\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\service\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\jwtauth\\authsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\jwtauth\\authsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\repository\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\repository\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\sevices\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\interfaces\\sevices\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\repository\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\repository\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\service\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\service\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\sevices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\interfaces\\sevices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\dtos\\notedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\dtos\\notedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\notesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\notesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NotesDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\sevices\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\interfaces\\sevices\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\repository\\inoterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,32 +102,8 @@
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\repository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\interfaces\\repository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\notesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\notesapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\interfaces\\sevices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\interfaces\\sevices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,16 +118,8 @@
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|d:\\git-hub_pr\\notesapi\\notesapi\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21F3011B-157F-4B5D-A317-863EC2C70659}|NotesApi\\NotesApi.csproj|solutionrelative:notesapi\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -129,74 +141,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NotesDb/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-16T18:24:58.483Z",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "NotesApi\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:23:47.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\JwtService.cs",
+              "RelativeDocumentMoniker": "NotesApi\\JwtAuth\\JwtService.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\JwtService.cs",
+              "RelativeToolTip": "NotesApi\\JwtAuth\\JwtService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T19:25:12.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "NotesApi\\Service\\UserService.cs",
               "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\UserService.cs",
               "RelativeToolTip": "NotesApi\\Service\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T06:22:50.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "AuthExtensions.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\AuthExtensions.cs",
+              "RelativeDocumentMoniker": "NotesApi\\JwtAuth\\AuthExtensions.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\AuthExtensions.cs",
+              "RelativeToolTip": "NotesApi\\JwtAuth\\AuthExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T20:11:58.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\appsettings.json",
               "RelativeDocumentMoniker": "NotesApi\\appsettings.json",
               "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\appsettings.json",
               "RelativeToolTip": "NotesApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-13T10:09:43.458Z"
+              "WhenOpened": "2025-06-13T10:09:43.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NoteRepository.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\NoteRepository.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Repository\\NoteRepository.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\NoteRepository.cs",
-              "RelativeToolTip": "NotesApi\\Repository\\NoteRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAuKrqvxAAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Program.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Program.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Program.cs",
+              "RelativeToolTip": "NotesApi\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:27:03.839Z"
+              "WhenOpened": "2025-06-16T08:34:49.269Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NotesController.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\NotesController.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Controllers\\NotesController.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\NotesController.cs",
-              "RelativeToolTip": "NotesApi\\Controllers\\NotesController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAABFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "AuthSettings.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\AuthSettings.cs",
+              "RelativeDocumentMoniker": "NotesApi\\JwtAuth\\AuthSettings.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\JwtAuth\\AuthSettings.cs",
+              "RelativeToolTip": "NotesApi\\JwtAuth\\AuthSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:59:07.577Z"
+              "WhenOpened": "2025-06-16T19:33:08.454Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Repository\\UserRepository.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "NotesApi\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:23:47.545Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -204,163 +240,135 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NoteService.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\NoteService.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Service\\NoteService.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\NoteService.cs",
-              "RelativeToolTip": "NotesApi\\Service\\NoteService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwDoAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Controllers\\NotesController.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "NotesApi\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:37:34.807Z"
+              "WhenOpened": "2025-06-16T10:59:07.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "INoteRepository.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
-              "RelativeToolTip": "NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:36:10.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "INoteService.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\INoteService.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Sevices\\INoteService.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\INoteService.cs",
-              "RelativeToolTip": "NotesApi\\Interfaces\\Sevices\\INoteService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:41:38.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NoteDto.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\NoteDto.cs",
-              "RelativeDocumentMoniker": "NotesApi\\DTOs\\NoteDto.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\NoteDto.cs",
-              "RelativeToolTip": "NotesApi\\DTOs\\NoteDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:02:52.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "NotesApi\\DTOs\\CategoryDto.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\CategoryDto.cs",
-              "RelativeToolTip": "NotesApi\\DTOs\\CategoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:40:02.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Note.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Note.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Models\\Note.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Note.cs",
-              "RelativeToolTip": "NotesApi\\Models\\Note.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:57:41.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Models\\Category.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Category.cs",
-              "RelativeToolTip": "NotesApi\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:57:31.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NoteConfiguration.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
-              "RelativeToolTip": "NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:01:12.194Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "NotesApi\\DTOs\\UserDto.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "NotesApi\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:02:43.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "NotesApi\\Controllers\\UserController.cs",
               "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "NotesApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:16:47.95Z"
+              "WhenOpened": "2025-06-16T06:16:47.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
-              "RelativeToolTip": "NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:21:58.38Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "NotesApi\\Controllers\\CategoryController.cs",
               "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "NotesApi\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:31:40.212Z"
+              "WhenOpened": "2025-06-13T10:31:40.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "NotesApi\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\AppDbContext.cs",
               "RelativeToolTip": "NotesApi\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:16:07.78Z"
+              "WhenOpened": "2025-06-13T11:16:07.78Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
+              "Title": "NoteService.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\NoteService.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Service\\NoteService.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\NoteService.cs",
+              "RelativeToolTip": "NotesApi\\Service\\NoteService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:37:34.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NoteRepository.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\NoteRepository.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Repository\\NoteRepository.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Repository\\NoteRepository.cs",
+              "RelativeToolTip": "NotesApi\\Repository\\NoteRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAuKrqvxAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:27:03.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "NotesApi\\DTOs\\UserDto.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "NotesApi\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:02:43.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\CategoryService.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Service\\CategoryService.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\CategoryService.cs",
+              "RelativeToolTip": "NotesApi\\Service\\CategoryService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:26:19.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\IUserService.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Sevices\\IUserService.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\IUserService.cs",
+              "RelativeToolTip": "NotesApi\\Interfaces\\Sevices\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:21:06.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NoteDto.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\NoteDto.cs",
+              "RelativeDocumentMoniker": "NotesApi\\DTOs\\NoteDto.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\NoteDto.cs",
+              "RelativeToolTip": "NotesApi\\DTOs\\NoteDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:02:52.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "NotesApi.csproj",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\NotesApi.csproj",
               "RelativeDocumentMoniker": "NotesApi\\NotesApi.csproj",
@@ -372,7 +380,100 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NotesDb/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-16T18:24:58.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "INoteRepository.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
+              "RelativeToolTip": "NotesApi\\Interfaces\\Repository\\INoteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:36:10.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "INoteService.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\INoteService.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Sevices\\INoteService.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\INoteService.cs",
+              "RelativeToolTip": "NotesApi\\Interfaces\\Sevices\\INoteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:41:38.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "NotesApi\\DTOs\\CategoryDto.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\DTOs\\CategoryDto.cs",
+              "RelativeToolTip": "NotesApi\\DTOs\\CategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:40:02.813Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "Note.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Note.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Models\\Note.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Note.cs",
+              "RelativeToolTip": "NotesApi\\Models\\Note.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:57:41.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Models\\Category.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\Category.cs",
+              "RelativeToolTip": "NotesApi\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:57:31.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "NoteConfiguration.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
+              "RelativeToolTip": "NotesApi\\Data\\Configurations\\NoteConfiguration.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:01:12.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
+              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
+              "RelativeToolTip": "NotesApi\\Interfaces\\Repository\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:21:58.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "NotesApi\\Data\\Configurations\\UserConfiguration.cs",
@@ -384,19 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\IUserService.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Interfaces\\Sevices\\IUserService.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Interfaces\\Sevices\\IUserService.cs",
-              "RelativeToolTip": "NotesApi\\Interfaces\\Sevices\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:21:06.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "NotesApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
@@ -404,11 +493,12 @@
               "RelativeToolTip": "NotesApi\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T06:15:49.172Z"
+              "WhenOpened": "2025-06-13T06:15:49.172Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Models\\User.cs",
               "RelativeDocumentMoniker": "NotesApi\\Models\\User.cs",
@@ -420,19 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Program.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Program.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Program.cs",
-              "RelativeToolTip": "NotesApi\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:34:49.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Data\\Configurations\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "NotesApi\\Data\\Configurations\\CategoryConfiguration.cs",
@@ -441,22 +519,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T05:18:11.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\CategoryService.cs",
-              "RelativeDocumentMoniker": "NotesApi\\Service\\CategoryService.cs",
-              "ToolTip": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\Service\\CategoryService.cs",
-              "RelativeToolTip": "NotesApi\\Service\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:26:19.95Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }

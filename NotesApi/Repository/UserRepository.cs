@@ -7,7 +7,6 @@ namespace NotesApi.Repository;
 public class UserRepository(AppDbContext context) : IUserRepository
 {
     private readonly AppDbContext _context = context;
-
     public async Task<User> CreateAsync(User user)
     {
         await _context.Users.AddAsync(user);

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NotesApi.Interfaces.Sevices;
 using NotesAPI.DTOs;
 
@@ -6,6 +7,8 @@ namespace NotesApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
+
 public class CategoryController(ICategoryService service) : ControllerBase
 {
     private readonly ICategoryService _categoryService = service;

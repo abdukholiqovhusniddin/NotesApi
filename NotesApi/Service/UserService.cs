@@ -1,16 +1,19 @@
 ﻿using NotesApi.DTOs;
+using NotesApi.Exceptions;
 using NotesApi.Interfaces.Repository;
 using NotesApi.Interfaces.Sevices;
+using NotesApi.JwtAuth;
 using NotesApi.Models;
 namespace NotesApi.Service;
-public class UserService(IUserRepository userRepository): IUserService
+public class UserService(IUserRepository userRepository, JwtService jwtService): IUserService
 {
     private readonly IUserRepository _userRepository = userRepository;
 
     public async Task<UserRegisterDto> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
-            throw new InvalidOperationException("User already exists.");
+            throw new ApiException("User already exists.");
+
         await _userRepository.CreateAsync(new User
         {
             Username = userRegisterDto.Username,
@@ -23,14 +26,22 @@ public class UserService(IUserRepository userRepository): IUserService
         };
     }
 
-    public async Task<int> LoginAsync(UserDto dto)
+    public async Task<string?> LoginAsync(UserDto dto)
     {
         var user = await _userRepository.GetByUsernameAsync(dto.Username);
         if (user is null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
-            return 0;
-        int Id = user.Id;
-        return Id;
+        {
+            throw new ApiException("Invalid username or password.");
+        }
+
+        var userDto = new UserDto
+        {
+            Username = user.Username,
+            Email = user.Email,
+            Id = user.Id,
+            Password = dto.Password
+        };
+
+        return jwtService.GenerateToken(userDto);
     }
-
-
 }
