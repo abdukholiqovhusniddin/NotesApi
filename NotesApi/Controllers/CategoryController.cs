@@ -8,7 +8,6 @@ namespace NotesApi.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 [Authorize]
-
 public class CategoryController(ICategoryService service) : ControllerBase
 {
     private readonly ICategoryService _categoryService = service;

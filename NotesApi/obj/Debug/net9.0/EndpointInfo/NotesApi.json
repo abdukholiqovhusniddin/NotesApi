@@ -452,24 +452,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserRegisterDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserRegisterDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserRegisterDto"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -483,17 +466,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             }
           }
@@ -605,22 +588,13 @@
         },
         "additionalProperties": false
       },
-      "UserDto": {
+      "UserLoginDto": {
         "required": [
           "email",
-          "password",
-          "username"
+          "password"
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "username": {
-            "minLength": 1,
-            "type": "string"
-          },
           "email": {
             "maxLength": 50,
             "minLength": 3,
@@ -662,10 +636,10 @@
     },
     "securitySchemes": {
       "Bearer": {
-        "type": "apiKey",
+        "type": "http",
         "description": "Please enter JWT with Bearer into field. Example: \"Bearer {token}\"",
-        "name": "Authorization",
-        "in": "header"
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
       }
     }
   },

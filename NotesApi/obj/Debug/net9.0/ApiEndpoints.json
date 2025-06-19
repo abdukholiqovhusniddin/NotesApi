@@ -262,8 +262,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "NotesApi.DTOs.UserDto",
+        "Name": "userLoginDto",
+        "Type": "NotesApi.DTOs.UserLoginDto",
         "IsRequired": true
       }
     ],
@@ -283,16 +283,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "NotesApi.DTOs.UserRegisterDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

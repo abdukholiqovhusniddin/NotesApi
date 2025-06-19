@@ -4,44 +4,34 @@ using NotesApi.Interfaces.Repository;
 using NotesApi.Interfaces.Sevices;
 using NotesApi.JwtAuth;
 using NotesApi.Models;
+
 namespace NotesApi.Service;
-public class UserService(IUserRepository userRepository, JwtService jwtService): IUserService
+public class UserService(IUserRepository userRepository, JwtService jwtService) : IUserService
 {
     private readonly IUserRepository _userRepository = userRepository;
 
-    public async Task<UserRegisterDto> CreateUserAsync(UserRegisterDto userRegisterDto)
+    public async Task<UserDto> CreateUserAsync(UserRegisterDto userDto)
     {
-        if (await _userRepository.ExistsAsync(userRegisterDto.Username))
+        if (await _userRepository.ExistsAsync(userDto.Username))
+        {
             throw new ApiException("User already exists.");
+        }
 
         await _userRepository.CreateAsync(new User
         {
-            Username = userRegisterDto.Username,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRegisterDto.Password),
-            Email = userRegisterDto.Email
+            Username = userDto.Username,
+            Email = userDto.Email,
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password)
         });
-        return new UserRegisterDto { 
-            Username = userRegisterDto.Username, 
-            Email = userRegisterDto.Email 
-        };
+        return new UserDto(userDto.Username, userDto.Email);
     }
 
-    public async Task<string?> LoginAsync(UserDto dto)
+    public async Task<string> LoginAsync(UserLoginDto userLoginDto)
     {
-        var user = await _userRepository.GetByUsernameAsync(dto.Username);
-        if (user is null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
-        {
-            throw new ApiException("Invalid username or password.");
-        }
-
-        var userDto = new UserDto
-        {
-            Username = user.Username,
-            Email = user.Email,
-            Id = user.Id,
-            Password = dto.Password
-        };
-
-        return jwtService.GenerateToken(userDto);
+        User user = await _userRepository.GetByEmailAsync(userLoginDto.Email);
+        if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash)) 
+            throw new ApiException("Invalid password.");
+        
+        return jwtService.GenerateToken(user);
     }
 }

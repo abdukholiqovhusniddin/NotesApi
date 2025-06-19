@@ -23,10 +23,13 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<JwtService>();
 builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("AuthSettings"));
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
 
 
 builder.Services.AddSwaggerGen(c =>
@@ -37,8 +40,9 @@ builder.Services.AddSwaggerGen(c =>
         In = ParameterLocation.Header,
         Description = "Please enter JWT with Bearer into field. Example: \"Bearer {token}\"",
         Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT"
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -55,6 +59,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
 
 var app = builder.Build();
 

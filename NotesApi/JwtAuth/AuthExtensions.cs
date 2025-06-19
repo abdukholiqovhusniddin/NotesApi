@@ -16,12 +16,14 @@ public static class AuthExtensions
             {
                 ValidateIssuer = false,
                 ValidateAudience = false,
-               // ValidateLifetime = true,
+                ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(authSettings.SecretKey)),
             };
         });
+        services.AddAuthorization();
+
         return services;
     }
 }
