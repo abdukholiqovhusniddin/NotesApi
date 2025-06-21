@@ -29,9 +29,9 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
     public async Task<string> LoginAsync(UserLoginDto userLoginDto)
     {
         User user = await _userRepository.GetByEmailAsync(userLoginDto.Email);
-        if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash)) 
+        if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash))
             throw new ApiException("Invalid password.");
-        
+
         return jwtService.GenerateToken(user);
     }
 }

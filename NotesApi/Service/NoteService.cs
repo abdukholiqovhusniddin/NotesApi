@@ -5,10 +5,11 @@ using NotesApi.Models;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Service;
-public class NoteService(INoteRepository noteRepository, ICategoryRepository categoryRepository) : INoteService
+public class NoteService(INoteRepository noteRepository, ICategoryRepository categoryRepository, ICurrentUserService current) : INoteService
 {
     private readonly INoteRepository _noteRepository = noteRepository;
     private readonly ICategoryRepository _categoryRepository = categoryRepository;
+    private readonly ICurrentUserService _current = current;
 
     public async Task<(IEnumerable<NoteDto> Notes, int TotalCount)> GetAllNotesAsync(
         int UserId,
@@ -17,7 +18,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
         int page = 1,
         int pageSize = 10)
     {
-        var (notes, totalCount) = await _noteRepository.GetAllAsync(UserId ,categoryId, search, page, pageSize);
+        var (notes, totalCount) = await _noteRepository.GetAllAsync(_current.UserId,categoryId, search, page, pageSize);
 
         return (notes.Select(n => new NoteDto
         {
@@ -57,7 +58,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             Title = createNoteDto.Title,
             Content = createNoteDto.Content,
             CategoryId = createNoteDto.CategoryId,
-            UserId = createNoteDto.UserId
+            UserId = _current.UserId
         });
 
 
@@ -82,7 +83,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
         if(!await _categoryRepository.ExistsAsync(updateNoteDto.CategoryId))
             throw new ApiException("Specified category does not exist.");
 
-        (note.Title, note.Content, note.CategoryId, note.UserId) = (updateNoteDto.Title, updateNoteDto.Content, updateNoteDto.CategoryId, updateNoteDto.UserId);
+        (note.Title, note.Content, note.CategoryId, note.UserId, note.UpdatedAt) = (updateNoteDto.Title, updateNoteDto.Content, updateNoteDto.CategoryId, _current.UserId, DateTime.UtcNow);
 
         var updatedNote = await _noteRepository.UpdateAsync(note);
 

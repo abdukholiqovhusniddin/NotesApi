@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static NotesApi.DTOs.UserDto;
 
 namespace NotesApi.Models;
 public class User: BaseEntity
@@ -9,4 +10,5 @@ public class User: BaseEntity
 
     public string PasswordHash { get; set; } = string.Empty;
     public List<Note> Notes { get; set; } = [];
+    //public Role Role{get; set; }
 }

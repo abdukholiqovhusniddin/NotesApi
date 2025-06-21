@@ -20,7 +20,7 @@ public class CategoryRepository(AppDbContext context) : ICategoryRepository
 
     public async Task<Category?> GetByNameAsync(string name) =>
         await _context.Categories
-            .FirstOrDefaultAsync(c => c.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
+            .FirstOrDefaultAsync(c => c.Name.ToLower() == name.ToLower());
 
     public async Task<Category> CreateAsync(Category category)
     {

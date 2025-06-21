@@ -562,15 +562,10 @@
         "required": [
           "categoryId",
           "content",
-          "title",
-          "userId"
+          "title"
         ],
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
             "maxLength": 100,
             "minLength": 3,

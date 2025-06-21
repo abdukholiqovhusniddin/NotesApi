@@ -31,5 +31,14 @@ public class UserConfiguration: IEntityTypeConfiguration<User>
             .HasForeignKey(n => n.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
+        //builder.HasData(
+        //    new User
+        //    {
+        //        Id = 1,
+        //        Username = "admin",
+        //        Email = "test@gmail.com",
+        //        Role = DTOs.UserDto.Role.Admin,
+        //        PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123")
+        //    });
     }
 }

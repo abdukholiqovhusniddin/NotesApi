@@ -23,6 +23,8 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<JwtService>();
