@@ -1,4 +1,5 @@
-﻿using NotesApi.Models;
+﻿using NotesApi.DTOs;
+using NotesApi.Models;
 
 namespace NotesApi.Interfaces.Repository;
 
@@ -10,9 +11,9 @@ public interface INoteRepository
             string? search = null,
             int page = 1,
             int pageSize = 10);
-    Task<Note?> GetByIdAsync(int id);
+    Task<Note?> GetByIdAsync(int id, int userId);
     Task<Note> CreateAsync(Note note);
     Task<Note> UpdateAsync(Note note);
-    Task<bool> DeleteAsync(int id);
-    Task<bool> ExistsAsync(int id);
+    Task<bool> DeleteAsync(int id, int userId);
+    Task<bool> ExistsAsync(int id, int userId);
 }

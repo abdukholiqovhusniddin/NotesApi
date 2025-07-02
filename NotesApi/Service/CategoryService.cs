@@ -6,16 +6,17 @@ using NotesAPI.DTOs;
 
 namespace NotesApi.Service;
 
-public class CategoryService(ICategoryRepository categoryRepository) : ICategoryService
+public class CategoryService(ICategoryRepository categoryRepository, ICurrentUserService current) : ICategoryService
 {
     private readonly ICategoryRepository _categoryRepository = categoryRepository;
+    private readonly ICurrentUserService _current = current;
 
     public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync() =>
         (await _categoryRepository.GetAllAsync())
-            .Select(c => new CategoryDto(c.Id, c.Name));
+            .Select(c => new CategoryDto(c.Id, c.Name, c.UserId));
     public async Task<CategoryDto?> GetCategoryByIdAsync(int id) =>
         (await _categoryRepository.GetByIdAsync(id)) is { } category
-            ? new CategoryDto(category.Id, category.Name)
+            ? new CategoryDto(category.Id, category.Name, _current.UserId)
             : null;
 
     public async Task<CategoryDto> CreateCategoryAsync(CategoryInputDto createCategoryDto)
@@ -23,8 +24,8 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
         if(await _categoryRepository.GetByNameAsync(createCategoryDto.Name) is not null)
             throw new ApiException("Category with this name already exists.");
 
-        var createdCategory = await _categoryRepository.CreateAsync(new Category { Name = createCategoryDto.Name});
-        return new CategoryDto(createdCategory.Id, createdCategory.Name);
+        var createdCategory = await _categoryRepository.CreateAsync(new Category { Name = createCategoryDto.Name, UserId = _current.UserId});
+        return new CategoryDto(createdCategory.Id, createdCategory.Name, _current.UserId);
     }
 
     public async Task<CategoryDto?> UpdateCategoryAsync(int id, CategoryInputDto updateCategoryDto)
@@ -38,7 +39,7 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
         category.Name = updateCategoryDto.Name;
         var updatedCategory = await _categoryRepository.UpdateAsync(category);
 
-        return new CategoryDto(updatedCategory.Id, updatedCategory.Name);
+        return new CategoryDto(updatedCategory.Id, updatedCategory.Name, _current.UserId);
     }
 
     public async Task<bool> DeleteCategoryAsync(int id)

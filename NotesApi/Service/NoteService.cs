@@ -12,7 +12,6 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
     private readonly ICurrentUserService _current = current;
 
     public async Task<(IEnumerable<NoteDto> Notes, int TotalCount)> GetAllNotesAsync(
-        int UserId,
         int? categoryId = null,
         string? search = null,
         int page = 1,
@@ -27,14 +26,13 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
             Content = n.Content,
             CategoryId = n.CategoryId,
             CategoryName = n.Category.Name,
-            UserId = n.UserId,
             CreatedAt = n.CreatedAt,
             UpdatedAt = n.UpdatedAt
         }), totalCount);
     }
 
     public async Task<NoteDto?> GetNoteByIdAsync(int id) =>
-        (await _noteRepository.GetByIdAsync(id)) is { } note
+        (await _noteRepository.GetByIdAsync(id, _current.UserId)) is { } note
             ? new NoteDto
                 {
                     Id = note.Id,
@@ -77,7 +75,7 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
 
     public async Task<NoteDto?> UpdateNoteAsync(int id, NoteInputDto updateNoteDto)
     {
-        var note = await _noteRepository.GetByIdAsync(id);
+        var note = await _noteRepository.GetByIdAsync(id, _current.UserId);
         if (note is null) return null;
 
         if(!await _categoryRepository.ExistsAsync(updateNoteDto.CategoryId))
@@ -101,5 +99,5 @@ public class NoteService(INoteRepository noteRepository, ICategoryRepository cat
     }
 
     public async Task<bool> DeleteNoteAsync(int id) =>
-        await _noteRepository.ExistsAsync(id) && await _noteRepository.DeleteAsync(id);
+        await _noteRepository.ExistsAsync(id, _current.UserId) && await _noteRepository.DeleteAsync(id, _current.UserId);
 }

@@ -14,7 +14,6 @@ public class NotesController(INoteService service) : ControllerBase
 
     [HttpGet]
     public async Task<ActionResult<object>> GetNotes(
-        [FromQuery] int UserId,
         [FromQuery] int? categoryId = null,
         [FromQuery] string? search = null,
         [FromQuery] int page = 1,
@@ -23,11 +22,10 @@ public class NotesController(INoteService service) : ControllerBase
         page = Math.Max(page, 1);
         if (pageSize < 1 || pageSize > 100) pageSize = 10;
 
-        var (notes, totalCount) = await _noteService.GetAllNotesAsync(UserId ,categoryId, search, page, pageSize);
+        var (notes, totalCount) = await _noteService.GetAllNotesAsync(categoryId, search, page, pageSize);
 
         var response = new
         {
-            UserId = UserId,
             Notes = notes,
             TotalCount = totalCount,
             Page = page,

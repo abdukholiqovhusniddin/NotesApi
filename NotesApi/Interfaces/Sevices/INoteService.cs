@@ -4,7 +4,6 @@ namespace NotesApi.Interfaces.Sevices;
 public interface INoteService
 {
     Task<(IEnumerable<NoteDto> Notes, int TotalCount)> GetAllNotesAsync(
-            int UserId,
             int? categoryId = null,
             string? search = null,
             int page = 1,
