@@ -13,7 +13,7 @@ public class NotesController(INoteService service) : ControllerBase
     private readonly INoteService _noteService = service;
 
     [HttpGet]
-    public async Task<ActionResult<object>> GetNotes(
+    public async Task<ActionResult<ApiResponse<object>>> GetNotes(
         [FromQuery] int? categoryId = null,
         [FromQuery] string? search = null,
         [FromQuery] int page = 1,
@@ -24,7 +24,7 @@ public class NotesController(INoteService service) : ControllerBase
 
         var (notes, totalCount) = await _noteService.GetAllNotesAsync(categoryId, search, page, pageSize);
 
-        var response = new
+        var response = new 
         {
             Notes = notes,
             TotalCount = totalCount,
@@ -33,7 +33,11 @@ public class NotesController(INoteService service) : ControllerBase
             TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
         };
 
-        return Ok(response);
+        return Ok(new ApiResponse<object>
+        {
+            Data = response,
+            StatusCode = 200
+        });
     }
 
     [HttpGet("{id}")]
