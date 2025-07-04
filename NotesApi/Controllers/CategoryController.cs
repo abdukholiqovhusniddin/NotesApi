@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NotesApi.Interfaces.Sevices;
+using NotesApi.Models;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Controllers;
@@ -14,30 +15,58 @@ public class CategoryController(ICategoryService service) : ControllerBase
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CategoryDto>>> GetCategories() =>
-        Ok(await _categoryService.GetAllCategoriesAsync());
+        Ok(new ApiResponse<object>
+        {
+            Data = await _categoryService.GetAllCategoriesAsync(),
+            StatusCode = 200
+        });
 
     [HttpGet("{id}")]
     public async Task<ActionResult<CategoryDto>> GetCategory(int id) =>
         await _categoryService.GetCategoryByIdAsync(id) is { } category
-            ? Ok(category)
-            : NotFound($"Category with ID {id} not found.");
+            ? Ok((new ApiResponse<object>
+            {
+                Data = category,
+                StatusCode = 200
+            }))
+            : NotFound(new ApiResponse<object>
+            {
+                Error = $"Category with ID {id} not found.",
+                StatusCode = 404
+            });
    
     [HttpPost]
     public async Task<ActionResult<CategoryDto>> CreateCategory(CategoryInputDto createCategoryDto)
     {
             var category = await _categoryService.CreateCategoryAsync(createCategoryDto);
-            return CreatedAtAction(nameof(GetCategory), new { id = category.Id }, category);
+            return Ok(new ApiResponse<object>
+            {
+                Data = category,
+                StatusCode = 201
+            });
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<CategoryDto>> UpdateCategory(int id, CategoryInputDto updateCategoryDto) =>
              await _categoryService.UpdateCategoryAsync(id, updateCategoryDto) is { } updated
-                ? Ok(updated)
-                : NotFound($"Category with ID {id} not found.");
+                ? Ok((new ApiResponse<object>
+            {
+                Data = updated,
+                StatusCode = 200
+            }))
+                : NotFound((new ApiResponse<object>
+                {
+                    Error = $"Category with ID {id} not found.",
+                    StatusCode = 404
+                }));
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCategory(int id) =>
             await _categoryService.DeleteCategoryAsync(id)
                 ? NoContent()
-                : NotFound($"Category with ID {id} not found.");
+                : NotFound((new ApiResponse<object>
+                {
+                    Error = $"Category with ID {id} not found.",
+                    StatusCode = 404
+                }));
 }

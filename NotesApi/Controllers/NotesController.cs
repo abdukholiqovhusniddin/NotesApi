@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NotesApi.Interfaces.Sevices;
+using NotesApi.Models;
 using NotesAPI.DTOs;
 
 namespace NotesApi.Controllers;
@@ -43,23 +44,47 @@ public class NotesController(INoteService service) : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<NoteDto>> GetNote(int id) =>
         (await _noteService.GetNoteByIdAsync(id)) is { } note
-            ? Ok(note) : NotFound($"Note with ID {id} not found.");
+            ? Ok(new ApiResponse<object>
+            {
+                Data = note,
+                StatusCode = 200
+            }) : NotFound((new ApiResponse<object>
+            {
+                Error = $"Note with ID {id} not found.",
+                StatusCode = 404
+            }));
 
     [HttpPost]
     public async Task<ActionResult<NoteDto>> CreateNote(NoteInputDto createNoteDto)
     {
         var note = await _noteService.CreateNoteAsync(createNoteDto);
-        return CreatedAtAction(nameof(GetNote), new { id = note.Id }, note);
+        return Ok((new ApiResponse<object>
+        {
+            Data = note,
+            StatusCode = 200
+        }));
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<NoteDto>> UpdateNote(int id, NoteInputDto updateNoteDto) =>
                 await _noteService.UpdateNoteAsync(id, updateNoteDto) is { } updatedNote
-                ? Ok(updatedNote)
-                : NotFound($"Note with ID {id} not found.");
+                ? Ok(new ApiResponse<object>
+                {
+                    Data = updatedNote,
+                    StatusCode = 200
+                })
+                : NotFound(new ApiResponse<object>
+                {
+                    Error = $"Note with ID {id} not found.",
+                    StatusCode = 404
+                });
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteNote(int id) =>
         await _noteService.DeleteNoteAsync(id)
-            ? NoContent() : NotFound($"Note with ID {id} not found.");
+            ? NoContent() : NotFound((new ApiResponse<object>
+            {
+                Error = $"Note with ID {id} not found.",
+                StatusCode = 404
+            }));
 }

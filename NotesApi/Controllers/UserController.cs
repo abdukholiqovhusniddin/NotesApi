@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NotesApi.DTOs;
 using NotesApi.Interfaces.Sevices;
+using NotesApi.Models;
 
 namespace NotesApi.Controllers;
 [Route("api/[controller]")]
@@ -16,9 +17,17 @@ public class UserController(IUserService service): ControllerBase
         UserDto createdUser = await _userService.CreateUserAsync(userRegisterDto);
         if (createdUser == null)
         {
-            return BadRequest(new { message = "User with this email already exists" });
+            return BadRequest((new ApiResponse<object>
+            {
+                Error = "User with this email already exists.",
+                StatusCode = 400
+            }));
         }
-        return CreatedAtAction(nameof(CreateUser), new { email = userRegisterDto.Email }, createdUser);
+        return Ok((new ApiResponse<object>
+        {
+            Data = createdUser,
+            StatusCode = 200
+        }));
     }
 
     [HttpPost]
@@ -30,6 +39,10 @@ public class UserController(IUserService service): ControllerBase
         {
             return Unauthorized(new { message = "Invalid email or password" });
         }
-        return Ok(token);
+        return Ok((new ApiResponse<object>
+        {
+            Data = token,
+            StatusCode = 200
+        }));
     }
 }
