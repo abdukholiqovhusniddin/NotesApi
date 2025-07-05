@@ -1,9 +1,6 @@
 # NotesApi
+## 🌍 Til Tanlang / Choose Language / Выберите язык:
 
-Ushbu loyiha uchun README fayllari quyidagi tillarda mavjud:
-
-- [README_UZ.md](README_UZ.md) — O'zbek tilida
-- [README_RU.md](README_RU.md) — Rus tilida
-- [README_EN.md](README_EN.md) — Ingliz tilida
-
-Iltimos, kerakli tilni tanlang.
+- [🇺🇿 O'zbekcha](README_UZ.md)
+- [🇬🇧 English](README_EN.md)
+- [🇷🇺 Русский](README_RU.md)
