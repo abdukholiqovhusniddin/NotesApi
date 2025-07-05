@@ -37,7 +37,11 @@ public class UserController(IUserService service): ControllerBase
         var token = await _userService.LoginAsync(userLoginDto);
         if (string.IsNullOrEmpty(token))
         {
-            return Unauthorized(new { message = "Invalid email or password" });
+            return Unauthorized((new ApiResponse<object>
+            {
+                Error = "Invalid email or password.",
+                StatusCode = 401
+            }));
         }
         return Ok((new ApiResponse<object>
         {
