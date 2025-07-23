@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NotesApi.DTOs;
 using NotesApi.Interfaces.Sevices;
-using NotesApi.Models;
 
 namespace NotesApi.Controllers;
 [Route("api/[controller]")]

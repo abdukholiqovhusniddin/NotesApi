@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\NotesApi.csproj": {}
+    "C:\\Users\\Another love\\OneDrive\\Desktop\\Notes\\NotesApi\\NotesApi\\NotesApi.csproj": {}
   },
   "projects": {
-    "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\NotesApi.csproj": {
+    "C:\\Users\\Another love\\OneDrive\\Desktop\\Notes\\NotesApi\\NotesApi\\NotesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\NotesApi.csproj",
+        "projectUniqueName": "C:\\Users\\Another love\\OneDrive\\Desktop\\Notes\\NotesApi\\NotesApi\\NotesApi.csproj",
         "projectName": "NotesApi",
-        "projectPath": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\NotesApi.csproj",
+        "projectPath": "C:\\Users\\Another love\\OneDrive\\Desktop\\Notes\\NotesApi\\NotesApi\\NotesApi.csproj",
         "packagesPath": "C:\\Users\\Another love\\.nuget\\packages\\",
-        "outputPath": "D:\\Git-Hub_pr\\NotesApi\\NotesApi\\obj\\",
+        "outputPath": "C:\\Users\\Another love\\OneDrive\\Desktop\\Notes\\NotesApi\\NotesApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[9.0.6, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.22.1, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -102,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
